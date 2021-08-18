@@ -1,0 +1,12 @@
+(rule
+ (targets video_players.ml)
+ (deps video_players.mli)
+ (action (run %{bin:gen_js_api} %{deps})))
+
+(library
+ (public_name video-players)
+ (name video_players)
+ (modes byte)
+ (libraries gen_js_api js_of_ocaml js_of_ocaml-ppx)
+ (preprocess (pps js_of_ocaml-ppx))
+)

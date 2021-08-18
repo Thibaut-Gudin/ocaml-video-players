@@ -31,4 +31,10 @@ cordova plugin add video-players
 
 ## How to use it?
 
+### Create a *YouTube* video player
+
+See the [YouTube IFrame Player
+API](https://developers.google.com/youtube/iframe_api_reference) for
+more details
+
 [TODO]

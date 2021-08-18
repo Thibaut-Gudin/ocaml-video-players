@@ -35,6 +35,20 @@ cordova plugin add video-players
 
 See the [YouTube IFrame Player
 API](https://developers.google.com/youtube/iframe_api_reference) for
-more details
+more details.
 
-[TODO]
+The module `YT` contains everything you need to add a *YouTube* video
+plugin into your ocaml mobile app.
+
+[... TODO ...]
+
+### Create a *Dailymotion* video player
+
+See the [Dailymotion IFrame Player
+API](https://developer.dailymotion.com/player/#player-api) for more
+details.
+
+The module `DM` contains everything you need to add a *Dailymotion*
+video plugin into your ocaml mobile app.
+
+[... TODO ...]

@@ -146,8 +146,6 @@ module Vimeo : sig
 
   val ready_then : player -> (unit -> unit) -> unit [@@js.call "ready().then"]
 
-  val ready_then_v2 : player -> (unit -> unit) -> unit [@@js.call "ready.then"]
-
   val pause : player -> unit [@@js.call]
 
   val play_catch : player -> (unit -> unit) -> unit [@@js.call "play.catch"]

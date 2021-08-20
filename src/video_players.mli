@@ -62,6 +62,15 @@ module DM : sig
 
   type params
 
+  type scale_mode =
+    | Fit [@js "fit"]
+    | Fill [@js "fill"]
+    | Fill_Left [@js "fillLeft"]
+    | Fill_Right [@js "fillRight"]
+    | Fill_Top [@js "fillTop"]
+    | Fill_Bottom [@js "fillBottom"]
+  [@@js.enum]
+
   val params :
     ?autoplay:bool ->
     ?controls:bool ->
@@ -79,7 +88,7 @@ module DM : sig
     ?ui_start_screen_info:bool ->
     ?playlist:string ->
     ?fullscreen:bool ->
-    ?scale_mode:string ->
+    ?scale_mode:scale_mode ->
     ?loop:bool ->
     unit ->
     params

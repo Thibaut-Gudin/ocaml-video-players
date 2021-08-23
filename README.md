@@ -89,9 +89,9 @@ put in the player and 2 other kind of objects containing optional
 values: a `playerVars` object and an `event` object, you can see more
 details in the ".mli" file and in the YouTube IFrame Player API.
 
-We can sepcify the case of the optional argument `onStateChange` of the
+We can specify the case of the optional argument `onStateChange` of the
 `events` optional value of `opts`: it is a call-back that take an
-argument of type `e`, you muste use fuction from the `YT` module if you
+argument of type `e`, you must use function from the `YT` module if you
 want to use this argument correctly if you want to define that optional
 argument.
 

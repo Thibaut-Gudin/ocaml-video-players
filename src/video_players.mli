@@ -17,9 +17,9 @@ module YT : sig
   type playerVars
 
   val playerVars :
-    ?mute:int ->
-    ?playsinline:int ->
-    ?rel:int ->
+    ?mute:bool ->
+    ?playsinline:bool ->
+    ?rel:bool ->
     ?start:int ->
     unit ->
     playerVars

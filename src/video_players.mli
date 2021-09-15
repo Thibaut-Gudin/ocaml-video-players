@@ -9,14 +9,17 @@ type html_elt = Js_of_ocaml.Dom_html.element Js_of_ocaml.Js.t
 [@@@js.implem let html_elt_to_js = Obj.magic]
 
 module YT : sig
+  val set_on_iframe_api_ready : (unit -> unit) -> unit
+    [@@js.set "window.onYouTubeIframeAPIReady"]
+
   type player
 
   type playerVars
 
   val playerVars :
-    ?mute:int ->
-    ?playsinline:int ->
-    ?rel:int ->
+    ?mute:bool ->
+    ?playsinline:bool ->
+    ?rel:bool ->
     ?start:int ->
     unit ->
     playerVars
@@ -58,6 +61,8 @@ module YT : sig
 end
 
 module DM : sig
+  val set_async_init : (unit -> unit) -> unit [@@js.set "window.dmAsyncInit"]
+
   type player
 
   type params

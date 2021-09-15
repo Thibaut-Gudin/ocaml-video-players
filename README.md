@@ -81,6 +81,17 @@ let yt_opts =
   Video_players.YT.play_video player
 ```
 
+#### The `YT.set_on_iframe_api_ready` function
+
+This function is an ocaml binding for seting the currente value of
+`onYouTubeAPIReady`, this function is called once the *YouTube*
+JavaScript API is loaded. You can use this function to execute a
+callback when this API is loaded.
+
+The the [official
+documentation](https://developers.google.com/youtube/iframe_api_reference#Loading_a_Video_Player)
+for more details.
+
 #### The `opts` of a *YouTube* player
 
 The options object `opts` to create a *YouTube* player contains 5 values:
@@ -121,6 +132,15 @@ module).
 The `opts` of a *Dailymotion* player can contains an optional `params`
 objects that define several optional values, you can see all the
 possible values in the ".mli" file.
+
+#### The `DM.set_async_init` function
+
+This function is an ocaml binding for setting the `dmAsyncInit` function
+current value, this can be used for loading the SDK asynchronously.
+
+See the [official
+documentation](https://developer.dailymotion.com/tools/sdks/#sdk-javascript-loading-asynchronously)
+for more details.
 
 ### Create a *Vimeo* video player
 

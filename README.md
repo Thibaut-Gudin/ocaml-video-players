@@ -1,6 +1,6 @@
-# ocaml-video-players
+# ocaml-js-video-players
 
-## What does ocaml-video-players do ?
+## What does ocaml-js-video-players do ?
 
 This plugin allows you to add different video players to add in your
 ocaml mobile app.
@@ -18,7 +18,7 @@ specific player:
 
 You can use opam by pinning the repository with:
 ```Shell
-opam pin add video-players https://github.com/besport/ocaml-video-players
+opam pin add video-players https://github.com/besport/ocaml-js-video-players
 ```
 
 to compile your project, use:
@@ -26,9 +26,9 @@ to compile your project, use:
 dune build @install
 ```
 
-Finally, install the "video-players" plugin with:
+Finally, install the "js-video-players" plugin with:
 ```Shell
-cordova plugin add video-players
+cordova plugin add js-video-players
 ```
 
 
@@ -66,19 +66,19 @@ For example, with a given element *placeholder* you can create a
 
 ```Ocaml
 let yt_opts =
-    Video_players.YT.opts ~width:200 ~height:300 ~videoId:"your_youtube_video_ID"
+    Js_video_players.YT.opts ~width:200 ~height:300 ~videoId:"your_youtube_video_ID"
       ~playerVars:
-        (Video_players.YT.playerVars ~mute:0 ~playsinline:1 ())
+        (Js_video_players.YT.playerVars ~mute:0 ~playsinline:1 ())
       ~events:
-        (Video_players.YT.events
+        (Js_video_players.YT.events
                 ~onReady:(fun _ -> ignore (print_endline "ready") ())
                 ()
         )
   in
   let player =
-    Video_players.YT.new_player (Eliom_content.Html.To_dom.of_element placeholder) yt_opts
+    Js_video_players.YT.new_player (Eliom_content.Html.To_dom.of_element placeholder) yt_opts
   in
-  Video_players.YT.play_video player
+  Js_video_players.YT.play_video player
 ```
 
 #### The `YT.set_on_iframe_api_ready` function
@@ -110,7 +110,7 @@ argument.
 
 The other function of this module must be used with a `player` object
 created with this plugin, you can apply several function in it like for
-example the `Video_players.YT.destroy` function to destroy the player
+example the `Js_video_players.YT.destroy` function to destroy the player
 from your application.
 
 ### Create a *Dailymotion* video player

@@ -1,2 +1,2 @@
 (lang dune 2.8)
-(name video-players)
+(name js-video-players)

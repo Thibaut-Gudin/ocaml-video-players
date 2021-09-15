@@ -44,9 +44,9 @@ jobs:
         with:
           ocaml-version: ${{ matrix.ocaml-version }}
 
-      - run: opam pin add video-players.dev . --no-action
+      - run: opam pin add js-video-players.dev . --no-action
 
-      - run: opam depext video-players --yes --with-doc --with-test
+      - run: opam depext js-video-players --yes --with-doc --with-test
 
       - run: opam install . --deps-only --with-doc --with-test
 
